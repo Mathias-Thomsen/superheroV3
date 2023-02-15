@@ -51,6 +51,13 @@ public class SuperheroController {
         return new ResponseEntity<Superhero>(returnSuperhero, HttpStatus.OK);
     }
 
+    @DeleteMapping (path = "superhero/delete/{superheroName}") //localhost:8080/kea/superhero/delete/spiderman
+
+    public ResponseEntity<Superhero> deleteSuperhero(@PathVariable String superheroheroName){
+        Superhero returnDeletedSuperhero = superheroService.deleteSuperhero(superheroheroName);
+        return new ResponseEntity<Superhero>(returnDeletedSuperhero, HttpStatus.OK);
+    }
+
 
 
 

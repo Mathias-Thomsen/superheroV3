@@ -33,6 +33,11 @@ public class SuperheroService {
         Superhero returnNewSuperhero = repository.changeSuperhero(superhero);
         return returnNewSuperhero;
     }
+
+    public Superhero deleteSuperhero(String superhero){
+        Superhero returnDeletedSuperhero = repository.deleteSuperhero(superhero);
+        return returnDeletedSuperhero;
+    }
 }
 
 
