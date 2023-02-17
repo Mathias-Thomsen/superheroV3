@@ -13,7 +13,7 @@ public class SuperheroService {
     private final SuperheroRepository repository;
 
     public SuperheroService(SuperheroRepository superhero) {
-        this.repository = new SuperheroRepository();
+        this.repository = superhero;
     }
 
     public List<Superhero> getSuperheros()  {
@@ -35,8 +35,7 @@ public class SuperheroService {
     }
 
     public Superhero deleteSuperhero(String superhero){
-        Superhero returnDeletedSuperhero = repository.deleteSuperhero(superhero);
-        return returnDeletedSuperhero;
+        return repository.deleteSuperhero(superhero);
     }
 }
 

@@ -66,13 +66,18 @@ public class SuperheroRepository {
     }
 
     public Superhero deleteSuperhero(String superhero){
+
         for(Superhero superhero1 : superheroes) {
             if(superhero1.getSuperHeroName().equals(superhero)) {
                 superheroes.remove(superhero1);
             }
+
+            return superhero1;
         }
         return null;
+
     }
+
 
 
 
